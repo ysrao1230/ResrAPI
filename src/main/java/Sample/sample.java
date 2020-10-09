@@ -126,6 +126,7 @@ public class sample {
 			delete("https://reqres.in/api/users/2").
 		then().statusCode(204).
 			log().all();
+		System.out.println("Exit program");
 
 	}
 
