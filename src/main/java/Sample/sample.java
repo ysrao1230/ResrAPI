@@ -6,7 +6,6 @@ https://github.com/chayathilak/Test_API/tree/master/src/main/java/com/restassure
  *Number: 9052880660
  *Position: QA
  *Department: Testing
- *Organization: Onpassive
  */
 
 package Sample;
