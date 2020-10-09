@@ -22,6 +22,7 @@ public class Animal implements Dog, Lion {
 
 		Lion lion = new Animal();
 		lion.roar();
+		System.out.println("**********");
 
 	}
 
