@@ -5,7 +5,7 @@
     <classes>
       <class name="Sample.sample">
         <methods>
-          <include name="test_put"/>
+          <include name="test_delete"/>
         </methods>
       </class> <!-- Sample.sample -->
     </classes>
