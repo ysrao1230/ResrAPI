@@ -5,7 +5,7 @@
     <classes>
       <class name="Sample.sample">
         <methods>
-          <include name="lotto_resource_returns_200_with_expected_id_and_winners"/>
+          <include name="test_NumberOfCircuits_ShouldBe20_Parameterized" invocation-numbers="1"/>
         </methods>
       </class> <!-- Sample.sample -->
     </classes>

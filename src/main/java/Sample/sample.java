@@ -11,8 +11,10 @@ https://github.com/chayathilak/Test_API/tree/master/src/main/java/com/restassure
 package Sample;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.*;
@@ -24,7 +26,6 @@ public class sample {
 
 	static String name = "Hello World";
 
-	@SuppressWarnings("null")
 	public static void main(String[] args) {
 
 		System.out.println("Given String is: " + name);
@@ -38,14 +39,13 @@ public class sample {
 	public void lotto_resource_returns_200_with_expected_id_and_winners() {
 		System.out.println("**Starting Getting Body**");
 		given().
-			get("https://reqres.in/api/users?page=2").
+			get("https://reqres.in/api/users?page=2&id=12").
 		then().
 			statusCode(200).
-			body("data.id[1]", equalTo(8)).
-			body("data.first_name", hasItems("Michael", "Lindsay","Rachel")).
+			/*body("data.id[1]", equalTo(8)).
+			body("data.first_name", hasItems("Michael", "Lindsay","Rachel")).*/
 			log().
 			all();
-		
 		System.out.println("**Ending  Getting Body**");
 
 	}
@@ -114,7 +114,9 @@ public class sample {
 		when().
 			patch("https://reqres.in/api/users/2").
 		then().
-			statusCode(200);
+			statusCode(200).
+			log().
+			all();
 	}
 
 	@Test(priority = 6)
@@ -133,4 +135,40 @@ public class sample {
 
 	}
 
+	@Test(priority = 7)
+	public void test_ResponseHeaderData_ShouldBeCorrect() {
+	        
+	    given().
+	    when().
+	        get("http://ergast.com/api/f1/2017/circuits.json").
+	    then().
+	        assertThat().
+	        statusCode(200).
+	    and().
+	        contentType(ContentType.JSON).
+	    and().
+	        header("Content-Length",equalTo("4551")).
+	        log().
+	        all();
+	}
+	@Test(dataProvider="seasonsAndNumberOfRaces")
+	public void test_NumberOfCircuits_ShouldBe20_Parameterized(String series,String season,int numberOfRaces) {      
+	    given().
+	    	pathParam("value", series).
+	        pathParam("test",season).
+	    when().
+	        get("http://ergast.com/api/{value}/{test}/circuits.json").
+	    then().
+	        assertThat().
+	        body("MRData.CircuitTable.Circuits.Location",hasSize(numberOfRaces)).log().all();
+	}
+	@DataProvider(name="seasonsAndNumberOfRaces")
+	public Object[][] createTestDataRecords() {
+	    return new Object[][] {
+	        {"f1","2017",20},
+	        {"f1","2016",21},
+	        {"f1","1966",9},
+	        {"f1","2010",19}
+	    };
+	}
 }

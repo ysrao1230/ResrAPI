@@ -1,16 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+<testng-results skipped="0" failed="0" ignored="7" total="11" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8583" started-at="2020-10-16T07:30:40Z" finished-at="2020-10-16T07:30:49Z">
+  <suite name="Default suite" duration-ms="6655" started-at="2020-10-16T10:00:01Z" finished-at="2020-10-16T10:00:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8583" started-at="2020-10-16T07:30:40Z" finished-at="2020-10-16T07:30:49Z">
+    <test name="Default test" duration-ms="6655" started-at="2020-10-16T10:00:01Z" finished-at="2020-10-16T10:00:07Z">
       <class name="Sample.sample">
-        <test-method status="PASS" signature="lotto_resource_returns_200_with_expected_id_and_winners()[pri:1, instance:Sample.sample@59ec2012]" name="lotto_resource_returns_200_with_expected_id_and_winners" duration-ms="8550" started-at="2020-10-16T07:30:40Z" finished-at="2020-10-16T07:30:49Z">
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3fee9989]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="3467" started-at="2020-10-16T10:00:01Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-16T10:00:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[f1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2017]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- lotto_resource_returns_200_with_expected_id_and_winners -->
+        </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3fee9989]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="1197" started-at="2020-10-16T10:00:04Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-16T10:00:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[f1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2016]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3fee9989]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="394" started-at="2020-10-16T10:00:05Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-16T10:00:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[f1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1966]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3fee9989]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="1527" started-at="2020-10-16T10:00:06Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-16T10:00:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[f1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2010]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
       </class> <!-- Sample.sample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
