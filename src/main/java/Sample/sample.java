@@ -19,11 +19,14 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 import static io.restassured.RestAssured.given;
 import org.json.simple.JSONObject;
-
 public class sample {
 
+	static String url ="http://demo.guru99.com/V4/sinkministatement.php";
+	
 	static String name = "Hello World";
 
 	public static void main(String[] args) {
@@ -122,15 +125,21 @@ public class sample {
 	@Test(priority = 6)
 	public void test_delete() {
 
-		JSONObject request = new JSONObject();
-		given().
-			body(request.toJSONString()).
-		when().
-			delete("https://reqres.in/api/users/2").
-		then().
-			statusCode(204).
-			log().
-			all();
+		for(int i=0;i<=2;i++) {
+			
+			JSONObject request = new JSONObject();
+			given().
+				body(request.toJSONString()).
+				pathParam("value", i).
+			when().
+				delete("https://reqres.in/api/users/{value}").
+			then().
+				statusCode(204).
+				log().
+				all();
+			System.out.println(i);
+		}
+		
 		System.out.println("Exit program");
 
 	}
@@ -171,4 +180,56 @@ public class sample {
 	        {"f1","2010",19}
 	    };
 	}
+	
+	//Getting response body
+	@Test
+	public void getResponseBody() {
+		
+		
+	int status_code=	given().
+			queryParam("CUSTOMER_ID", "68195").
+			queryParam("PASSWORD", "1234!").
+			queryParam("Account_No","1").
+		when().
+			get("http://demo.guru99.com/V4/sinkministatement.php").getStatusCode();
+	System.out.println("the status code is: " +status_code);
+	System.out.println();
+	given().when().get(url).then().assertThat().statusCode(200);
+	}
+	
+	//Getting Headers
+	@Test
+	public static void getResponseHeaders(){
+		   System.out.println("The headers in the response "+
+		                   get(url).then().extract()
+		           .headers());
+		}
+	
+	//Getting response time
+	@Test
+	public static void getResponseTime(){
+		  System.out.println("The time taken to fetch the response "+get(url)
+		         .timeIn(TimeUnit.MILLISECONDS) + " milliseconds");
+		}
+	
+	//Getting the content type
+	@Test
+	public static void getResponseContentType(){
+		   System.out.println("The content type of response "+
+		           get(url).then().extract()
+		              .contentType());
+		}
+	@Test
+	public static void getSpecificPartOfResponseBody(){
+
+		ArrayList<String> amounts = when().get(url).then().extract().path("result.statements.AMOUNT") ;
+		int sumOfAll=0;
+		for(String a:amounts){
+
+		    System.out.println("The amount value fetched is "+a);
+		    sumOfAll=sumOfAll+Integer.valueOf(a);
+		}
+		System.out.println("The total amount is "+sumOfAll);
+
+		}
 }

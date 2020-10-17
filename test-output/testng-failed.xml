@@ -5,7 +5,7 @@
     <classes>
       <class name="Sample.sample">
         <methods>
-          <include name="test_NumberOfCircuits_ShouldBe20_Parameterized" invocation-numbers="1"/>
+          <include name="getSpecificPartOfResponseBody"/>
         </methods>
       </class> <!-- Sample.sample -->
     </classes>
