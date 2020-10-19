@@ -219,7 +219,6 @@ public class sample {
 		           get(url).then().extract()
 		              .contentType());
 		}
-	@Test
 	public static void getSpecificPartOfResponseBody(){
 
 		ArrayList<String> amounts = when().get(url).then().extract().path("result.statements.AMOUNT") ;
