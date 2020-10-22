@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20996" started-at="2020-10-19T10:00:27Z" finished-at="2020-10-19T10:00:48Z">
+  <suite name="Default suite" duration-ms="16094" started-at="2020-10-19T11:09:43Z" finished-at="2020-10-19T11:09:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20996" started-at="2020-10-19T10:00:27Z" finished-at="2020-10-19T10:00:48Z">
+    <test name="Default test" duration-ms="16094" started-at="2020-10-19T11:09:43Z" finished-at="2020-10-19T11:09:59Z">
       <class name="Sample.sample">
-        <test-method status="PASS" signature="getResponseBody()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseBody" duration-ms="3368" started-at="2020-10-19T10:00:27Z" finished-at="2020-10-19T10:00:30Z">
+        <test-method status="PASS" signature="getResponseBody()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseBody" duration-ms="3299" started-at="2020-10-19T11:09:43Z" finished-at="2020-10-19T11:09:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResponseBody -->
-        <test-method status="PASS" signature="getResponseContentType()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseContentType" duration-ms="622" started-at="2020-10-19T10:00:30Z" finished-at="2020-10-19T10:00:31Z">
+        <test-method status="PASS" signature="getResponseContentType()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseContentType" duration-ms="600" started-at="2020-10-19T11:09:46Z" finished-at="2020-10-19T11:09:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResponseContentType -->
-        <test-method status="PASS" signature="getResponseHeaders()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseHeaders" duration-ms="599" started-at="2020-10-19T10:00:31Z" finished-at="2020-10-19T10:00:31Z">
+        <test-method status="PASS" signature="getResponseHeaders()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseHeaders" duration-ms="921" started-at="2020-10-19T11:09:46Z" finished-at="2020-10-19T11:09:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResponseHeaders -->
-        <test-method status="PASS" signature="getResponseTime()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseTime" duration-ms="686" started-at="2020-10-19T10:00:31Z" finished-at="2020-10-19T10:00:32Z">
+        <test-method status="PASS" signature="getResponseTime()[pri:0, instance:Sample.sample@3f49dace]" name="getResponseTime" duration-ms="902" started-at="2020-10-19T11:09:47Z" finished-at="2020-10-19T11:09:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResponseTime -->
-        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="2631" started-at="2020-10-19T10:00:32Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T10:00:35Z">
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="1956" started-at="2020-10-19T11:09:48Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T11:09:50Z">
           <params>
             <param index="0">
               <value>
@@ -44,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
-        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="1500" started-at="2020-10-19T10:00:35Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T10:00:36Z">
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="370" started-at="2020-10-19T11:09:50Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T11:09:51Z">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
-        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="382" started-at="2020-10-19T10:00:36Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T10:00:37Z">
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="370" started-at="2020-10-19T11:09:51Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T11:09:51Z">
           <params>
             <param index="0">
               <value>
@@ -86,7 +86,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
-        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="1494" started-at="2020-10-19T10:00:37Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T10:00:38Z">
+        <test-method status="PASS" signature="test_NumberOfCircuits_ShouldBe20_Parameterized(java.lang.String, java.lang.String, int)[pri:0, instance:Sample.sample@3f49dace]" name="test_NumberOfCircuits_ShouldBe20_Parameterized" duration-ms="386" started-at="2020-10-19T11:09:51Z" data-provider="seasonsAndNumberOfRaces" finished-at="2020-10-19T11:09:51Z">
           <params>
             <param index="0">
               <value>
@@ -107,31 +107,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_NumberOfCircuits_ShouldBe20_Parameterized -->
-        <test-method status="PASS" signature="lotto_resource_returns_200_with_expected_id_and_winners()[pri:1, instance:Sample.sample@3f49dace]" name="lotto_resource_returns_200_with_expected_id_and_winners" duration-ms="1124" started-at="2020-10-19T10:00:38Z" finished-at="2020-10-19T10:00:39Z">
+        <test-method status="PASS" signature="lotto_resource_returns_200_with_expected_id_and_winners()[pri:1, instance:Sample.sample@3f49dace]" name="lotto_resource_returns_200_with_expected_id_and_winners" duration-ms="974" started-at="2020-10-19T11:09:51Z" finished-at="2020-10-19T11:09:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lotto_resource_returns_200_with_expected_id_and_winners -->
-        <test-method status="PASS" signature="post_data()[pri:2, instance:Sample.sample@3f49dace]" name="post_data" duration-ms="874" started-at="2020-10-19T10:00:39Z" finished-at="2020-10-19T10:00:40Z">
+        <test-method status="PASS" signature="post_data()[pri:2, instance:Sample.sample@3f49dace]" name="post_data" duration-ms="880" started-at="2020-10-19T11:09:52Z" finished-at="2020-10-19T11:09:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post_data -->
-        <test-method status="PASS" signature="xml_Validation()[pri:3, instance:Sample.sample@3f49dace]" name="xml_Validation" duration-ms="3108" started-at="2020-10-19T10:00:40Z" finished-at="2020-10-19T10:00:43Z">
+        <test-method status="PASS" signature="xml_Validation()[pri:3, instance:Sample.sample@3f49dace]" name="xml_Validation" duration-ms="887" started-at="2020-10-19T11:09:53Z" finished-at="2020-10-19T11:09:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- xml_Validation -->
-        <test-method status="PASS" signature="test_put()[pri:4, instance:Sample.sample@3f49dace]" name="test_put" duration-ms="821" started-at="2020-10-19T10:00:43Z" finished-at="2020-10-19T10:00:44Z">
+        <test-method status="PASS" signature="test_put()[pri:4, instance:Sample.sample@3f49dace]" name="test_put" duration-ms="828" started-at="2020-10-19T11:09:54Z" finished-at="2020-10-19T11:09:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_put -->
-        <test-method status="PASS" signature="test_patch()[pri:5, instance:Sample.sample@3f49dace]" name="test_patch" duration-ms="863" started-at="2020-10-19T10:00:44Z" finished-at="2020-10-19T10:00:45Z">
+        <test-method status="PASS" signature="test_patch()[pri:5, instance:Sample.sample@3f49dace]" name="test_patch" duration-ms="825" started-at="2020-10-19T11:09:55Z" finished-at="2020-10-19T11:09:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_patch -->
-        <test-method status="PASS" signature="test_delete()[pri:6, instance:Sample.sample@3f49dace]" name="test_delete" duration-ms="2454" started-at="2020-10-19T10:00:45Z" finished-at="2020-10-19T10:00:47Z">
+        <test-method status="PASS" signature="test_delete()[pri:6, instance:Sample.sample@3f49dace]" name="test_delete" duration-ms="2488" started-at="2020-10-19T11:09:56Z" finished-at="2020-10-19T11:09:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_delete -->
-        <test-method status="PASS" signature="test_ResponseHeaderData_ShouldBeCorrect()[pri:7, instance:Sample.sample@3f49dace]" name="test_ResponseHeaderData_ShouldBeCorrect" duration-ms="369" started-at="2020-10-19T10:00:47Z" finished-at="2020-10-19T10:00:48Z">
+        <test-method status="PASS" signature="test_ResponseHeaderData_ShouldBeCorrect()[pri:7, instance:Sample.sample@3f49dace]" name="test_ResponseHeaderData_ShouldBeCorrect" duration-ms="341" started-at="2020-10-19T11:09:58Z" finished-at="2020-10-19T11:09:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_ResponseHeaderData_ShouldBeCorrect -->

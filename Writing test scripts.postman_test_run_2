@@ -1,0 +1,302 @@
+{
+	"id": "6e927d4d-79e6-448f-83b1-be9a07aea226",
+	"name": "Writing test scripts",
+	"timestamp": "2020-10-21T12:08:54.340Z",
+	"collection_id": "c1533bef-5d77-4897-8796-4a40130c6241",
+	"folder_id": 0,
+	"environment_id": "e6fc525a-ed13-418f-9aa4-31ff85cc447a",
+	"totalPass": 14,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "ec6b5f4e-57b8-4714-a1f9-b1fd876c41cc",
+			"name": "Postman Echo GET",
+			"url": "https://postman-echo.com/get",
+			"time": 2690,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2690
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d470b067-06f5-44c1-a1d2-83481e4b01f9",
+			"name": "Postman Echo POST",
+			"url": "https://postman-echo.com/post",
+			"time": 300,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				300
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3919b0af-22a8-488d-97c1-122f95a90061",
+			"name": "Postman Echo PUT",
+			"url": "https://postman-echo.com/put",
+			"time": 298,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				298
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2f8a957e-8cd2-4e76-8e16-4f464160f1e5",
+			"name": "Postman Echo DELETE",
+			"url": "https://postman-echo.com/delete",
+			"time": 299,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				299
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "599c0ae1-1664-465f-abbf-48de0853544d",
+			"name": "https://reqres.in/api/users?page=2&id=12",
+			"url": "https://reqres.in/api/users?page=2&id=12",
+			"time": 202,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Name the first test": true
+			},
+			"testPassFailCounts": {
+				"Name the first test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				202
+			],
+			"allTests": [
+				{
+					"Name the first test": true
+				}
+			]
+		},
+		{
+			"id": "3bb42ccd-5ee1-450f-a4f7-c75d2f5b4618",
+			"name": "https://reqres.in/api/users?page=2",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Content header present": true,
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content header present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Content header present": true,
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "869c24ae-e2d2-4d2b-9d91-700400ae0190",
+			"name": "https://reqres.in/api/users?page=2",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Content header present": true,
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content header present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Content header present": true,
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "dbb49df2-f341-445c-8f3f-b512f7a1e4db",
+			"name": "https://reqres.in/api/user",
+			"url": "https://reqres.in/api/user",
+			"time": 197,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status test": true,
+				"Status test expect": false,
+				"response should be okay to process": false,
+				"Response property matches environment variable": true,
+				"Response time is less than 300ms": true,
+				"Status code name contains a string": true,
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status test expect": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response should be okay to process": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response property matches environment variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name contains a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				197
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Status test expect": false,
+					"response should be okay to process": false,
+					"Response property matches environment variable": true,
+					"Response time is less than 300ms": true,
+					"Status code name contains a string": true,
+					"Status code is 201": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 4316,
+	"collection": {
+		"requests": [
+			{
+				"id": "ec6b5f4e-57b8-4714-a1f9-b1fd876c41cc",
+				"method": "GET"
+			},
+			{
+				"id": "d470b067-06f5-44c1-a1d2-83481e4b01f9",
+				"method": "POST"
+			},
+			{
+				"id": "3919b0af-22a8-488d-97c1-122f95a90061",
+				"method": "PUT"
+			},
+			{
+				"id": "2f8a957e-8cd2-4e76-8e16-4f464160f1e5",
+				"method": "DELETE"
+			},
+			{
+				"id": "599c0ae1-1664-465f-abbf-48de0853544d",
+				"method": "GET"
+			},
+			{
+				"id": "3bb42ccd-5ee1-450f-a4f7-c75d2f5b4618",
+				"method": "GET"
+			},
+			{
+				"id": "869c24ae-e2d2-4d2b-9d91-700400ae0190",
+				"method": "GET"
+			},
+			{
+				"id": "dbb49df2-f341-445c-8f3f-b512f7a1e4db",
+				"method": "POST"
+			}
+		]
+	}
+}

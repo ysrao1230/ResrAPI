@@ -1,0 +1,110 @@
+{
+	"id": "456799f6-2186-4bce-9935-c957e9ff1c35",
+	"name": "Writing test scripts",
+	"timestamp": "2020-10-21T05:24:00.689Z",
+	"collection_id": "c1533bef-5d77-4897-8796-4a40130c6241",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ec6b5f4e-57b8-4714-a1f9-b1fd876c41cc",
+			"name": "Postman Echo GET",
+			"time": 284,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				330,
+				284
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "d470b067-06f5-44c1-a1d2-83481e4b01f9",
+			"name": "Postman Echo POST",
+			"time": 347,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				282,
+				347
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "3919b0af-22a8-488d-97c1-122f95a90061",
+			"name": "Postman Echo PUT",
+			"time": 306,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				283,
+				306
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "2f8a957e-8cd2-4e76-8e16-4f464160f1e5",
+			"name": "Postman Echo DELETE",
+			"time": 291,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				349,
+				291
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 2472,
+	"collection": {
+		"requests": [
+			{
+				"id": "ec6b5f4e-57b8-4714-a1f9-b1fd876c41cc",
+				"method": "GET"
+			},
+			{
+				"id": "d470b067-06f5-44c1-a1d2-83481e4b01f9",
+				"method": "POST"
+			},
+			{
+				"id": "3919b0af-22a8-488d-97c1-122f95a90061",
+				"method": "PUT"
+			},
+			{
+				"id": "2f8a957e-8cd2-4e76-8e16-4f464160f1e5",
+				"method": "DELETE"
+			}
+		]
+	}
+}
