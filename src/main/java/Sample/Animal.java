@@ -17,11 +17,14 @@ public class Animal implements Dog, Lion {
 		obj.bark();
 		obj.roar();
 
+		System.out.println("******DOG OBJECT*****");
 		Dog dog = new Animal();
 		dog.bark();
 
+		System.out.println("******LION OBJECT*****");
 		Lion lion = new Animal();
 		lion.roar();
+
 		System.out.println("**********");
 
 	}

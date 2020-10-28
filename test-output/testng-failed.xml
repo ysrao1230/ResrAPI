@@ -5,7 +5,7 @@
     <classes>
       <class name="Sample.sample">
         <methods>
-          <include name="getSpecificPartOfResponseBody"/>
+          <include name="post_data"/>
         </methods>
       </class> <!-- Sample.sample -->
     </classes>
