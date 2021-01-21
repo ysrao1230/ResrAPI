@@ -43,11 +43,10 @@ public class sample {
 	@Test(priority = 1)
 	public void lotto_resource_returns_200_with_expected_id_and_winners() {
 		System.out.println("**Starting Getting Body**");
-		given().get("https://reqres.in/api/users?page=2").then().statusCode(200).
-		
-		body("data.id[1]", equalTo(8)). body("data.first_name", hasItems("Michael",
-		 "Lindsay","Rachel")).log().all();
-		
+		given().get("https://ostaffapidev.onpassive.com/admin/company/list").then().statusCode(200)
+				.body("data.id[1]", equalTo(8)).body("data.first_name", hasItems("Michael", "Lindsay", "Rachel")).log()
+				.all();
+
 		System.out.println("**Ending  Getting Body**");
 
 	}
@@ -57,14 +56,17 @@ public class sample {
 	public void post_data() {
 		System.out.println("***********Starting  of posting Data*********");
 		JSONObject request = new JSONObject();
-		request.put("address", "chaya");
-		request.put("country", "BA");
-		request.put("id", 1);
+		request.put("contact", "chaya");
+		request.put("email", "BA");
+		request.put("isActive", true);
+		request.put("isDelete", true);
+		request.put("name", "Srinivasa Rao");
+		request.put("website", "onpassive.com");
 
 		System.out.println(request.toString());
 
-		given().body(request.toJSONString()).contentType("application/json; charset=UTF-8").when().post("http://localhost:8008/hrms-qa/admin/company").
-		then().statusCode(201).log().all();
+		given().body(request.toJSONString()).contentType("application/json; charset=UTF-8").when()
+				.post("https://ostaffapidev.onpassive.com/admin/company").then().statusCode(201).log().all();
 		System.out.println("*****Ending of posting Data*****");
 
 	}
@@ -89,11 +91,12 @@ public class sample {
 	public void test_put() {
 
 		JSONObject request = new JSONObject();
-		request.put("name", "chaya");
-		request.put("job", "BAA");
+		request.put("name", "Srinivasa");
+		request.put("job", "HOST NAME");
 		System.out.println(request.toString());
 
-		given().body(request.toJSONString()).when().put("https://reqres.in/api/users").then().statusCode(200);
+		given().body(request.toJSONString()).when().put("https://reqres.in/api/users").then().statusCode(200).log()
+				.all();
 
 	}
 
@@ -173,7 +176,8 @@ public class sample {
 	// Getting the content type
 	@Test
 	public static void getResponseContentType() {
-		System.out.println("The content type of response is: " + get(url).then().extract().contentType());
+		System.out.println("The content type of response is: "
+				+ get(url).then().log().all().statusCode(200).extract().contentType());
 	}
 
 	@Test
@@ -188,5 +192,39 @@ public class sample {
 		}
 		System.out.println("The total amount is " + sumOfAll);
 
+	}
+
+	@Test
+	public void submitForm() {
+		RestAssured.baseURI = "https://ostaffuidev.onpassive.com";
+		((RequestSpecification) given().get(baseURI)).urlEncodingEnabled(true).
+		param("username", "sathish")
+		.param("password", "admin@123").
+		header("Accept", ContentType.JSON.getAcceptHeader()).post("/login")
+		.then().statusCode(200);
+	}
+	
+	@Test
+	public void RegistrationSuccessful()
+	{		
+		RestAssured.baseURI ="https://ostaffapidev.onpassive.com/admin";
+		RequestSpecification request = RestAssured.given();
+
+		JSONObject requestParams = new JSONObject();
+		requestParams.put("password", "admin@123"); // Cast
+		requestParams.put("username", "sathish");
+		/*
+		 * requestParams.put("UserName", "sdimpleuser2dd2011");
+		 * requestParams.put("Password", "password1"); requestParams.put("Email",
+		 * "sample2ee26d9@gmail.com");
+		 */
+
+		request.body(requestParams.toJSONString());
+		Response response = request.get("/auth/signin");
+
+		int statusCode = response.getStatusCode();
+		System.out.println("The status code recieved: " + statusCode);
+
+		System.out.println("Response body: " + response.body().asString());
 	}
 }
