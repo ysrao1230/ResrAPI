@@ -10,9 +10,9 @@ public class PostReq {
 	public static void main(String[] args) {
 		DatapostusingPOJO data = new DatapostusingPOJO();
 
-		data.setFirsNname("Srinivasa Rao");
+		data.setFirsNname("Rama Rao");
 		data.setLastName("Yamalapalli");
-		data.setId(1231);
+		data.setId(1232);
 		data.setMentorName("Ramaraju");
 		data.setDesignation("Qualality Assurance");
 		data.setCourceName("Data Analysis");
