@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="14" total="15" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-20T16:11:31 IST" name="Default suite" finished-at="2021-01-20T16:11:33 IST" duration-ms="1630">
+  <suite name="Default suite" duration-ms="3130" started-at="2021-09-12T14:50:21 IST" finished-at="2021-09-12T14:50:24 IST">
     <groups>
     </groups>
-    <test started-at="2021-01-20T16:11:31 IST" name="Default test" finished-at="2021-01-20T16:11:33 IST" duration-ms="1630">
-      <class name="Sample.sample">
-        <test-method signature="RegistrationSuccessful()[pri:0, instance:Sample.sample@1cbb87f3]" started-at="2021-01-20T16:11:31 IST" name="RegistrationSuccessful" finished-at="2021-01-20T16:11:33 IST" duration-ms="1602" status="PASS">
+    <test name="Default test" duration-ms="3130" started-at="2021-09-12T14:50:21 IST" finished-at="2021-09-12T14:50:24 IST">
+      <class name="datausingPOJO.BearearAuthentication">
+        <test-method status="PASS" signature="bearerTokenAuthentication()[pri:0, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="bearerTokenAuthentication" duration-ms="3090" started-at="2021-09-12T14:50:21 IST" finished-at="2021-09-12T14:50:24 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegistrationSuccessful -->
-      </class> <!-- Sample.sample -->
+        </test-method> <!-- bearerTokenAuthentication -->
+      </class> <!-- datausingPOJO.BearearAuthentication -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
