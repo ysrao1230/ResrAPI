@@ -1,0 +1,8 @@
+{
+"id":"{{id}}",
+"firstname":"{{firstname}}",
+"lastname":"{{lastname}}",
+"designation":"{{designation}}",
+"experience":"years",
+"mentor":"{{mentor}}"
+}
