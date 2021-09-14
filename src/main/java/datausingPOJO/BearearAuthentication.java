@@ -80,9 +80,8 @@ public class BearearAuthentication {
 		RestAssured.baseURI = "https://hrmsapiqa.onpassive.com";
 		req = RestAssured.given();
 		req.header("Authorization", "Bearer " + At.validatingToken()).header("Content-Type", "application/json");
-		// Deprt new
-		// admin/department
 
+		// Deprt new
 		File f = new File("C:\\Users\\pc\\git\\ResrAPI\\ResrAPI\\BodyData\\newDepartmentCreate.json");
 		java.io.FileReader fr = new java.io.FileReader(f);
 		JSONTokener jt = new JSONTokener(fr);

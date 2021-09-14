@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5124" started-at="2021-09-13T14:17:05 IST" finished-at="2021-09-13T14:17:10 IST">
+  <suite name="Default suite" duration-ms="5340" started-at="2021-09-13T16:16:32 IST" finished-at="2021-09-13T16:16:37 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5124" started-at="2021-09-13T14:17:05 IST" finished-at="2021-09-13T14:17:10 IST">
+    <test name="Default test" duration-ms="5340" started-at="2021-09-13T16:16:32 IST" finished-at="2021-09-13T16:16:37 IST">
       <class name="datausingPOJO.BearearAuthentication">
-        <test-method status="PASS" signature="bearerTokenAuthentication()[pri:0, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="bearerTokenAuthentication" duration-ms="3288" started-at="2021-09-13T14:17:05 IST" finished-at="2021-09-13T14:17:08 IST">
+        <test-method status="PASS" signature="bearerTokenAuthentication()[pri:0, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="bearerTokenAuthentication" duration-ms="3387" started-at="2021-09-13T16:16:32 IST" finished-at="2021-09-13T16:16:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bearerTokenAuthentication -->
-        <test-method status="PASS" signature="assetActions()[pri:1, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="assetActions" duration-ms="506" started-at="2021-09-13T14:17:08 IST" finished-at="2021-09-13T14:17:08 IST">
+        <test-method status="PASS" signature="assetActions()[pri:1, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="assetActions" duration-ms="560" started-at="2021-09-13T16:16:35 IST" finished-at="2021-09-13T16:16:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- assetActions -->
-        <test-method status="PASS" signature="jobsActions()[pri:2, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="jobsActions" duration-ms="534" started-at="2021-09-13T14:17:08 IST" finished-at="2021-09-13T14:17:09 IST">
+        <test-method status="PASS" signature="jobsActions()[pri:2, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="jobsActions" duration-ms="562" started-at="2021-09-13T16:16:36 IST" finished-at="2021-09-13T16:16:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jobsActions -->
-        <test-method status="PASS" signature="departmentActions()[pri:3, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="departmentActions" duration-ms="741" started-at="2021-09-13T14:17:09 IST" finished-at="2021-09-13T14:17:10 IST">
+        <test-method status="PASS" signature="departmentActions()[pri:3, instance:datausingPOJO.BearearAuthentication@4abdb505]" name="departmentActions" duration-ms="770" started-at="2021-09-13T16:16:36 IST" finished-at="2021-09-13T16:16:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- departmentActions -->
