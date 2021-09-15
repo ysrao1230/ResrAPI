@@ -5,7 +5,9 @@
     <classes>
       <class name="datausingPOJO.BearearAuthentication">
         <methods>
-          <include name="bearerTokenAuthentication"/>
+          <include name="employeeResignation"/>
+          <include name="bellNotifications"/>
+          <include name="FAQs"/>
         </methods>
       </class> <!-- datausingPOJO.BearearAuthentication -->
     </classes>

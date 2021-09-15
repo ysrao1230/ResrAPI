@@ -9,28 +9,23 @@ import org.json.JSONTokener;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
 public class BearearAuthentication {
 	AuthcontrolToken At = new AuthcontrolToken();
-	RequestSpecification req;
 
 	@Test(priority = 0)
 	public void bearerTokenAuthentication() throws FileNotFoundException {
-		RestAssured.baseURI = "https://hrmsapiqa.onpassive.com";
-		req = RestAssured.given();
-		req.header("Authorization", "Bearer " + At.validatingToken()).header("Content-Type", "application/json");
+
 		String addingNewDept = "{\r\n" + "  \"name\": \"hjhjh\",\r\n" + "  \"companyId\": \"mani0002\",\r\n"
 				+ "  \"branchId\": 2,\r\n" + "  \"description\": \"\"\r\n" + "}";
 
-		Response addingDept = req.body(addingNewDept).post("/admin/department");
+		Response addingDept = At.geturi_qa().body(addingNewDept).post("/admin/department");
 		addingDept.prettyPrint();
 
 		Assert.assertEquals(200, addingDept.getStatusCode());
 
-		Response onboarding = req.when().get("/onboard/employee/branch/2");
+		Response onboarding = At.geturi_qa().when().get("/onboard/employee/branch/2");
 
 		onboarding.prettyPrint();
 
@@ -38,35 +33,29 @@ public class BearearAuthentication {
 
 		System.out.println("******ONBOARDING DATA*********");
 
-		Response Onboardinglist = req.headers("companyId", "9LE9b0UIKQSj4Gxfcn-wPA==").get("/onboard/employee/list");
+		Response Onboardinglist = At.geturi_qa().headers("companyId", "9LE9b0UIKQSj4Gxfcn-wPA==")
+				.get("/onboard/employee/list");
 		Onboardinglist.prettyPrint();
 
 	}
 
 	@Test(priority = 1)
 	public void assetActions() {
-		System.out.println("******************");
-		RestAssured.baseURI = "https://hrmsapiqa.onpassive.com";
-		req = RestAssured.given();
-		req.header("Authorization", "Bearer " + At.validatingToken()).header("Content-Type", "application/json");
+
 		String assertPyload = "{\r\n" + "  \"name\": \"hdjdj4dj\",\r\n" + "  \"companyId\": \"mani0002\",\r\n"
 				+ "  \"description\": \"\"\r\n" + "}";
 
-		Response assertpost = req.body(assertPyload).post("/admin/Assets");
+		Response assertpost = At.geturi_qa().body(assertPyload).post("/admin/Assets");
 
 		assertpost.prettyPrint();
 	}
 
 	@Test(priority = 2)
 	public void jobsActions() {
-		System.out.println("******************");
-		RestAssured.baseURI = "https://hrmsapiqa.onpassive.com";
-		req = RestAssured.given();
-		req.header("Authorization", "Bearer " + At.validatingToken()).header("Content-Type", "application/json");
 
 		// Deleting job
 		String parameters = "{\"id\":17}";
-		Response deleteJob = req.body(parameters).put("/admin/job/delete");
+		Response deleteJob = At.geturi_qa().body(parameters).put("/admin/job/delete");
 		System.out.println(deleteJob.getStatusCode());
 		System.out.println(deleteJob.getStatusLine());
 		System.out.println(deleteJob.getTimeIn(TimeUnit.MICROSECONDS));
@@ -76,10 +65,6 @@ public class BearearAuthentication {
 
 	@Test(priority = 3)
 	public void departmentActions() throws FileNotFoundException {
-		System.out.println("******************");
-		RestAssured.baseURI = "https://hrmsapiqa.onpassive.com";
-		req = RestAssured.given();
-		req.header("Authorization", "Bearer " + At.validatingToken()).header("Content-Type", "application/json");
 
 		// Deprt new
 		File f = new File("C:\\Users\\pc\\git\\ResrAPI\\ResrAPI\\BodyData\\newDepartmentCreate.json");
@@ -87,12 +72,75 @@ public class BearearAuthentication {
 		JSONTokener jt = new JSONTokener(fr);
 		JSONObject jo = new JSONObject(jt);
 
-		Response postingDept = req.body(jo.toString()).post("/admin/department");
+		Response postingDept = At.geturi_qa().body(jo.toString()).post("/admin/department");
 		postingDept.prettyPrint();
 
 		// Getting employee department data
-		Response departmentlist = req.headers("companyId", "dZFanJQL1DjksMse64vaNw==").get("/admin/department/list");
+		Response departmentlist = At.geturi_qa().headers("companyId", "dZFanJQL1DjksMse64vaNw==")
+				.get("/admin/department/list");
 		departmentlist.prettyPrint();
 	}
 
+	@Test(priority = 4)
+	public void employeeResignation() throws FileNotFoundException {
+
+		// Posting Emp resignation
+		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
+		java.io.FileReader fr = new java.io.FileReader(f);
+		// JSONTokener jt = new JSONTokener(fr);
+		JSONObject jo = new JSONObject(new JSONTokener(fr));
+
+		Response emp_resingation_post = At.geturi_dev().body(jo.get("empresign").toString())
+				.post("/admin/exit/emp/resignation");
+
+		System.out.println(emp_resingation_post.getStatusCode());
+		emp_resingation_post.prettyPrint();
+
+	}
+
+	@Test(priority = 5)
+	public void FAQs() throws FileNotFoundException {
+
+		// Posting Emp resingation
+		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
+		java.io.FileReader fr = new java.io.FileReader(f);
+		JSONObject jo = new JSONObject(new JSONTokener(fr));
+
+		/*
+		 * Response emp_resingation_post = req.body(jo.toString()).headers("companyId",
+		 * "mani0002") .post("/admin/exit/saveSubjAndObjQuestions");
+		 * 
+		 * System.out.println(emp_resingation_post.getStatusCode());
+		 * emp_resingation_post.prettyPrint();
+		 */
+		// Getting data
+
+		Response comp_faqs = At.geturi_dev().headers("companyId", "dZFanJQL1DjksMse64vaNw==")
+				.get("/admin/exit/AllExitRecordQuestions");
+		comp_faqs.prettyPrint();
+
+	}
+
+	@Test(priority = 6)
+	public void bellNotifications() throws FileNotFoundException {
+		System.out.println("********FAQ Post**********");
+		// Posting Emp resingation
+		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
+		java.io.FileReader fr = new java.io.FileReader(f);
+		JSONObject jo = new JSONObject(new JSONTokener(fr));
+
+		/*
+		 * Response emp_resingation_post = req.body(jo.toString()).headers("companyId",
+		 * "mani0002") .post("/admin/exit/saveSubjAndObjQuestions");
+		 * 
+		 * System.out.println(emp_resingation_post.getStatusCode());
+		 * emp_resingation_post.prettyPrint();
+		 */
+		// Getting data
+
+		Response notification_bell = At.geturi_dev().body(jo.get("notification_bell").toString())
+				.headers("companyId", "dZFanJQL1DjksMse64vaNw==")
+				.post("/admin/notification/bellIconById/zaVXN6HpKqm59Q9XaAefzA%3D%3D");
+		notification_bell.prettyPrint();
+	}
 }

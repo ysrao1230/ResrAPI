@@ -1,0 +1,30 @@
+{
+  "empresign" : {
+    "empId" : "31",
+    "resigSubDate" : "2021-09-08",
+    "tentLeaveDate" : "2021-09-15",
+    "reason" : "Career growth",
+    "description" : "Learned many new concepts and need to explore more",
+    "noticePeriod" : "15",
+    "isChecked" : false
+  },
+  "FAQs" : {
+    "objective" : [ {
+      "objectiveQuestion" : "testing0011"
+    }, {
+      "objectiveQuestion" : "testing0022"
+    }, {
+      "objectiveQuestion" : "testing0033"
+    } ],
+    "subjective" : [ {
+      "subjectiveQuestion" : "testing0044"
+    }, {
+      "subjectiveQuestion" : "testing0055"
+    }, {
+      "subjectiveQuestion" : "testing0066"
+    } ]
+  },
+  "notification_bell" : {
+    "notificationId" : 1
+  }
+}
