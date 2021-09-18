@@ -1,7 +1,6 @@
 package datausingPOJO;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.concurrent.TimeUnit;
 
 import org.json.JSONObject;
@@ -15,7 +14,7 @@ public class BearearAuthentication {
 	AuthcontrolToken At = new AuthcontrolToken();
 
 	@Test(priority = 0)
-	public void bearerTokenAuthentication() throws FileNotFoundException {
+	public void bearerTokenAuthentication() throws Exception {
 
 		String addingNewDept = "{\r\n" + "  \"name\": \"hjhjh\",\r\n" + "  \"companyId\": \"mani0002\",\r\n"
 				+ "  \"branchId\": 2,\r\n" + "  \"description\": \"\"\r\n" + "}";
@@ -40,7 +39,7 @@ public class BearearAuthentication {
 	}
 
 	@Test(priority = 1)
-	public void assetActions() {
+	public void assetActions() throws Exception {
 
 		String assertPyload = "{\r\n" + "  \"name\": \"hdjdj4dj\",\r\n" + "  \"companyId\": \"mani0002\",\r\n"
 				+ "  \"description\": \"\"\r\n" + "}";
@@ -51,7 +50,7 @@ public class BearearAuthentication {
 	}
 
 	@Test(priority = 2)
-	public void jobsActions() {
+	public void jobsActions() throws Exception {
 
 		// Deleting job
 		String parameters = "{\"id\":17}";
@@ -64,7 +63,7 @@ public class BearearAuthentication {
 	}
 
 	@Test(priority = 3)
-	public void departmentActions() throws FileNotFoundException {
+	public void departmentActions() throws Exception {
 
 		// Deprt new
 		File f = new File("C:\\Users\\pc\\git\\ResrAPI\\ResrAPI\\BodyData\\newDepartmentCreate.json");
@@ -82,14 +81,15 @@ public class BearearAuthentication {
 	}
 
 	@Test(priority = 4)
-	public void employeeResignation() throws FileNotFoundException {
+	public void employeeResignation() throws Exception {
 
 		// Posting Emp resignation
-		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
-		java.io.FileReader fr = new java.io.FileReader(f);
+//		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
+//		java.io.FileReader fr = new java.io.FileReader(new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json"));
 		// JSONTokener jt = new JSONTokener(fr);
-		JSONObject jo = new JSONObject(new JSONTokener(fr));
-
+		JSONObject jo = new JSONObject(new JSONTokener(
+				new java.io.FileReader(new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json"))));
+		System.out.println(jo.get("empresign").toString());
 		Response emp_resingation_post = At.geturi_dev().body(jo.get("empresign").toString())
 				.post("/admin/exit/emp/resignation");
 
@@ -99,13 +99,12 @@ public class BearearAuthentication {
 	}
 
 	@Test(priority = 5)
-	public void FAQs() throws FileNotFoundException {
+	public void FAQs() throws Exception {
 
-		// Posting Emp resingation
-		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
-		java.io.FileReader fr = new java.io.FileReader(f);
-		JSONObject jo = new JSONObject(new JSONTokener(fr));
-
+		Object string = new JSONObject(new JSONTokener(
+				new java.io.FileReader(new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json"))))
+						.get("FAQs");
+		System.out.println(string);
 		/*
 		 * Response emp_resingation_post = req.body(jo.toString()).headers("companyId",
 		 * "mani0002") .post("/admin/exit/saveSubjAndObjQuestions");
@@ -122,13 +121,15 @@ public class BearearAuthentication {
 	}
 
 	@Test(priority = 6)
-	public void bellNotifications() throws FileNotFoundException {
+	public void bellNotifications() throws Exception {
 		System.out.println("********FAQ Post**********");
 		// Posting Emp resingation
-		File f = new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json");
-		java.io.FileReader fr = new java.io.FileReader(f);
-		JSONObject jo = new JSONObject(new JSONTokener(fr));
 
+		Object string = new JSONObject(new JSONTokener(
+				new java.io.FileReader(new File("C:/Users/pc/git/ResrAPI/ResrAPI/BodyData/OStaff_input.json"))))
+						.get("notification_bell");
+		System.out.println(string);
+//		Object string = jsonObject.get("notification_bell");
 		/*
 		 * Response emp_resingation_post = req.body(jo.toString()).headers("companyId",
 		 * "mani0002") .post("/admin/exit/saveSubjAndObjQuestions");
@@ -138,7 +139,7 @@ public class BearearAuthentication {
 		 */
 		// Getting data
 
-		Response notification_bell = At.geturi_dev().body(jo.get("notification_bell").toString())
+		Response notification_bell = At.geturi_dev().body(string.toString())
 				.headers("companyId", "dZFanJQL1DjksMse64vaNw==")
 				.post("/admin/notification/bellIconById/zaVXN6HpKqm59Q9XaAefzA%3D%3D");
 		notification_bell.prettyPrint();

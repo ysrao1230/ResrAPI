@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\pc\AppData\Local\Temp\testng-eclipse-409798696\testng-customsuite.xml</span>
+                    <span>C:\Users\pc\AppData\Local\Temp\testng-eclipse--1557415001\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 3 failed,   4 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,17 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="FAQs">FAQs</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="bellNotifications">bellNotifications</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="employeeResignation">employeeResignation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="bearerTokenAuthentication">bearerTokenAuthentication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -128,17 +118,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="FAQs">FAQs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="assetActions">assetActions</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="bearerTokenAuthentication">bearerTokenAuthentication</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="bellNotifications">bellNotifications</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="departmentActions">departmentActions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="datausingPOJO.BearearAuthentication" hash-for-method="employeeResignation">employeeResignation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -166,17 +166,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="FAQs">
-                  </a> <!-- FAQs -->
-                  <span class="method-name">FAQs</span>
-                  <div class="stack-trace">io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at datausingPOJO.AuthcontrolToken.validatingToken_dev(AuthcontrolToken.java:35)
-	at datausingPOJO.AuthcontrolToken.geturi_dev(AuthcontrolToken.java:40)
-	at datausingPOJO.BearearAuthentication.FAQs(BearearAuthentication.java:118)
+                  <a name="bearerTokenAuthentication">
+                  </a> <!-- bearerTokenAuthentication -->
+                  <span class="method-name">bearerTokenAuthentication</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [401] but found [200]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at datausingPOJO.BearearAuthentication.bearerTokenAuthentication(BearearAuthentication.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -205,123 +205,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 34 more
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="bellNotifications">
-                  </a> <!-- bellNotifications -->
-                  <span class="method-name">bellNotifications</span>
-                  <div class="stack-trace">io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at datausingPOJO.AuthcontrolToken.validatingToken_dev(AuthcontrolToken.java:35)
-	at datausingPOJO.AuthcontrolToken.geturi_dev(AuthcontrolToken.java:40)
-	at datausingPOJO.BearearAuthentication.bellNotifications(BearearAuthentication.java:141)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 34 more
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="employeeResignation">
-                  </a> <!-- employeeResignation -->
-                  <span class="method-name">employeeResignation</span>
-                  <div class="stack-trace">io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at datausingPOJO.AuthcontrolToken.validatingToken_dev(AuthcontrolToken.java:35)
-	at datausingPOJO.AuthcontrolToken.geturi_dev(AuthcontrolToken.java:40)
-	at datausingPOJO.BearearAuthentication.employeeResignation(BearearAuthentication.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 34 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -336,6 +219,13 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="FAQs">
+                  </a> <!-- FAQs -->
+                  <span class="method-name">FAQs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="assetActions">
                   </a> <!-- assetActions -->
                   <span class="method-name">assetActions</span>
@@ -343,9 +233,9 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="bearerTokenAuthentication">
-                  </a> <!-- bearerTokenAuthentication -->
-                  <span class="method-name">bearerTokenAuthentication</span>
+                  <a name="bellNotifications">
+                  </a> <!-- bellNotifications -->
+                  <span class="method-name">bellNotifications</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -353,6 +243,13 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
                   <a name="departmentActions">
                   </a> <!-- departmentActions -->
                   <span class="method-name">departmentActions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="employeeResignation">
+                  </a> <!-- employeeResignation -->
+                  <span class="method-name">employeeResignation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -367,7 +264,7 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pc\AppData\Local\Temp\testng-eclipse-409798696\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pc\AppData\Local\Temp\testng-eclipse--1557415001\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -420,36 +317,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'bearerTokenAuthentication')
 data.setCell(0, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(0, 3, 3902);
+data.setCell(0, 3, 6638);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'departmentActions')
 data.setCell(1, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(1, 3, 998);
+data.setCell(1, 3, 872);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'jobsActions')
+data.setCell(2, 1, 'bellNotifications')
 data.setCell(2, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(2, 3, 578);
+data.setCell(2, 3, 487);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'assetActions')
 data.setCell(3, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(3, 3, 511);
+data.setCell(3, 3, 458);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'employeeResignation')
+data.setCell(4, 1, 'jobsActions')
 data.setCell(4, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(4, 3, 216);
+data.setCell(4, 3, 451);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'FAQs')
+data.setCell(5, 1, 'employeeResignation')
 data.setCell(5, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(5, 3, 209);
+data.setCell(5, 3, 447);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'bellNotifications')
+data.setCell(6, 1, 'FAQs')
 data.setCell(6, 2, 'datausingPOJO.BearearAuthentication')
-data.setCell(6, 3, 161);
+data.setCell(6, 3, 351);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -477,38 +374,34 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">datausingPOJO.BearearAuthentication</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bearerTokenAuthentication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">assetActions</span>
-                <span class="method-start">3910 ms</span>
+                <span class="method-start">6654 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">jobsActions</span>
-                <span class="method-start">4425 ms</span>
+                <span class="method-start">7115 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">departmentActions</span>
-                <span class="method-start">5012 ms</span>
+                <span class="method-start">7572 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">employeeResignation</span>
-                <span class="method-start">6012 ms</span>
+                <span class="method-start">8450 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">FAQs</span>
-                <span class="method-start">6235 ms</span>
+                <span class="method-start">8899 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">bellNotifications</span>
-                <span class="method-start">6449 ms</span>
+                <span class="method-start">9252 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
