@@ -2,12 +2,15 @@ package datausingPOJO;
 
 import static io.restassured.RestAssured.given;
 
+import org.testng.annotations.Test;
+
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 public class POJO_complexaddress {
 
-	public static void main(String[] args) {
+	@Test
+	public static void testing() {
 
 		POJO_complex_address add = new POJO_complex_address();
 		add.setHno("22-24");
@@ -19,7 +22,7 @@ public class POJO_complexaddress {
 		add.setZipcode("502032");
 
 		DatapostusingPOJO_add data_add = new DatapostusingPOJO_add();
-		data_add.setId(50);
+		data_add.setId(54);
 		data_add.setFirsNname("shyamala");
 		data_add.setLastName("sariki");
 		data_add.setMentorName("Srilakshmi");
